@@ -35,8 +35,7 @@ export const convertModifiers = (
 	}
 
 	if (modifiers?.sort) {
-		result.clauses.order = convertSort(modifiers.sort);
-		// TODO: add support for nested sorts
+		result.clauses.order = convertSort(modifiers.sort, collection, idxGenerator);
 	}
 
 	return result;
